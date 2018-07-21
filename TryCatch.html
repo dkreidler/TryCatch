@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Try Catch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        /* Try, catch, finally */
+        try {
+            console.log('Start of code block');
+
+
+            thisDoesNotExist();
+
+            console.log('End of code -- never reached.');
+
+
+        } catch (err) {
+
+            console.log('Error has occured: ' + err.stack);
+
+        } finally {
+            console.log('This is always run.');
+        }
+        console.log('... and then execution continues.');
+
+        function thisDoesNotExist() {
+            console.log('I exist NOW, motherfuckers!');
+        }
+    </script>
+
+</body>
+
+</html>
